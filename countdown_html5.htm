@@ -1,0 +1,50 @@
+<html>
+    <head>
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>CountDown Timer</title>
+        <meta name="author" content="allee@adobe.com">
+        <script type="application/javascript" src="lib/connect_customPodSDK.js"></script>
+        <!--script type="application/javascript" src="js/clock.js"></script-->
+        <link href="css/style.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://use.typekit.net/uwi7gjl.css">
+
+
+    </head>
+
+<body>
+
+<div class="container" id="container">
+    <p contenteditable="true" id="titler" class="title" onkeyup="changeTitle()"> Welcome to Kissimmee Utility Authority's Monthly Board meeting.</p>
+    <p contenteditable="true" id="titler" class="title" onkeyup="changeTitle()"> The Meeting will begin in:</p>
+    <p id="timer" class="counter">15</p>
+    <p id="units" class="subtext">minutes</p>
+    <p id="granular" class="small-counter">00:00</p>
+
+    <button class="btn-grad" id="btnStartStop" onclick="startStopTimer()">Start</button>
+    <button class="btn-grad" id="btnSettings" onclick="showSettings()">Settings</button>
+
+    <div class="KUAemblem">
+      <img class="kuaemblem" src="images/kua.png" alt="" height="300" width="300">
+
+    </div>
+
+    <div class="ct-settings" id="settings">
+        <form class="form-container">
+                <span class="settingsTitle">Set Time</span><br/><br/>
+                <label>Minutes: </label>
+                <input type="text" id="numMinutes" name="numMinutes" maxlength="3" size="4"><br/>
+                <input type="checkbox" id="chkTimer" value="showTimer" checked onclick="timerChecked()">Show Timer to participants<br/>
+                <span id="msgError" class="error"></span><br/>
+                <button class="btn-grad" type="button" id="btnOk" onclick="setTime()">OK</button>
+                <button class="btn-grad" type="button" id="btnCancel" onclick="cancelSettings()">Cancel</button>
+        </form>
+    </div>
+
+</div>
+
+
+<script type="application/javascript" src="js/clock.min.js"></script>
+
+
+</body>
+</html>
